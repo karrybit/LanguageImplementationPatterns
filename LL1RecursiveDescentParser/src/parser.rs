@@ -55,8 +55,8 @@ impl Parser {
         } else {
             panic!(
                 "expecting {}; found {}",
-                TokenType::token_name_by(token_type.to_index()),
-                TokenType::token_name_by(self.look_ahead.as_ref().unwrap().token_type.to_index())
+                token_type.name(),
+                self.look_ahead.as_ref().unwrap().token_type.name()
             );
         }
     }
