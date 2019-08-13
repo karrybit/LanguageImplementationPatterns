@@ -1,7 +1,7 @@
 use super::token_type::TokenType;
 
-pub(crate) struct Token {
-    pub(crate) token_type: TokenType,
+pub struct Token {
+    pub token_type: TokenType,
     text: String,
 }
 

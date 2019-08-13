@@ -8,3 +8,4 @@ edition = "2018"
 
 [dependencies]
 ll1_recursive_descent_lexer = { package = "ll1_recursive_descent_lexer", path = "./LL1RecursiveDescentLexer/" }
+ll1_recursive_descent_parser = { package = "ll1_recursive_descent_parser", path = "./LL1RecursiveDescentParser" }

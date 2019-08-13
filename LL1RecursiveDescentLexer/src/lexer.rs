@@ -1,19 +1,19 @@
 use super::token::Token;
 use super::token_type::TokenType;
 
-pub(crate) struct Lexer {
+pub struct Lexer {
     input: String,
     c: Option<char>,
     p: usize,
 }
 
 impl Lexer {
-    pub(crate) fn new(input: String) -> Self {
+    pub fn new(input: String) -> Self {
         let c = input.chars().nth(0);
         Self { input, c, p: 0 }
     }
 
-    pub(crate) fn next_token(&mut self) -> Token {
+    pub fn next_token(&mut self) -> Token {
         loop {
             match self.c {
                 Some(' ') | Some('\t') | Some('\n') | Some('\r') => {

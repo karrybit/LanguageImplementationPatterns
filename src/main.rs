@@ -1,4 +1,5 @@
 use ll1_recursive_descent_lexer;
+use ll1_recursive_descent_parser;
 
 fn main() {
     println!("Start Language Implementation Pattern");
@@ -9,5 +10,8 @@ fn main() {
         std::process::exit(1);
     }
 
-    ll1_recursive_descent_lexer::lexing(args.pop().unwrap());
+    let program = args.pop().unwrap();
+
+    ll1_recursive_descent_lexer::lexing(&program);
+    ll1_recursive_descent_parser::parse(&program);
 }

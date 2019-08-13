@@ -1,3 +1,4 @@
+#[derive(Debug, PartialEq, PartialOrd)]
 pub enum TokenType {
     EOF,
     Name,
@@ -9,11 +10,11 @@ pub enum TokenType {
 static TOKEN_NAMES: [&'static str; 5] = ["<EOF>", "NAME", "COMMA", "LBRACK", "RBRACK"];
 
 impl TokenType {
-    pub(crate) fn token_name_by(i: usize) -> String {
+    pub fn token_name_by(i: usize) -> String {
         TOKEN_NAMES[i].to_string()
     }
 
-    pub(crate) fn to_index(&self) -> usize {
+    pub fn to_index(&self) -> usize {
         match self {
             TokenType::EOF => 0,
             TokenType::Name => 1,
